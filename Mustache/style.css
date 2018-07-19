@@ -1,0 +1,67 @@
+.mustache{
+    height: 180px;
+    width: 180px;
+    left: 100px;
+    color: black;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-box-shadow: 150px 240px 0 0 currentColor;
+    box-shadow: 150px 240px 0 0 currentColor,
+                300px 240px 0 0 currentColor;
+    
+}
+
+.mustache::before{
+    content: "";
+    height: 180px;
+    width: 180px;
+    top:82px;
+    position: absolute;
+    color: currentColor;
+    border-bottom: 180px solid currentColor;
+    border-radius: 0 0 0 100%;
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-animation: mymove 5s infinite;
+}
+
+.mustache::after{
+    content: "";
+    height: 180px;
+    width: 180px;
+    top:82px;
+    left: 450px;
+    position: absolute;
+    color: currentColor;
+    border-bottom: 180px solid currentColor;
+    border-radius: 0 0 100% 0;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+    50% {border-bottom-left-radius: 150px;}
+}
+
+@keyframes mymove {
+    50% {border-bottom-left-radius: 150px;}
+}
+
+/*
+.beard{
+    height: 360px;
+    width: 800px;
+    left: 00px;
+    top: 100px;
+    position: absolute;
+    color: currentColor;
+    -webkit-box-shadow: 180px 360px;
+    box-shadow: 180px 360px;
+    
+}*/

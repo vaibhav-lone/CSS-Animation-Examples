@@ -1,0 +1,251 @@
+nav {
+  padding: 50px;
+  text-align: center;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+nav > ul > li {
+  float: left;
+  width: 150px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+nav > ul > li:hover {
+  background: #d5d5d5;
+  border-radius: 5px;
+}
+
+ul.drop-menu {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 0;
+}
+
+ul.drop-menu li {
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+ul.drop-menu li:hover {
+  background: #606060;
+}
+
+ul.drop-menu li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+/* Start Here */
+ul.drop-menu li {
+  display: none;
+}
+
+li:hover > ul.drop-menu li {
+  display: block;
+}
+/*------------- Menu-1 -------------*/
+li:hover ul.drop-menu.menu-1 li:nth-child(1) {
+  opacity: 0;
+  animation: menu1 600ms -150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(2) {
+  opacity: 0;
+  animation: menu1 600ms 0ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(3) {
+  opacity: 0;
+  animation: menu1 600ms 150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(4) {
+  opacity: 0;
+  animation: menu1 600ms 300ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(5) {
+  opacity: 0;
+  animation: menu1 600ms 450ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(6) {
+  opacity: 0;
+  animation: menu1 600ms 600ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-1 li:nth-child(7) {
+  opacity: 0;
+  animation: menu1 600ms 750ms ease-in-out forwards;
+}
+
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px);
+  }
+}
+
+/*------------- Menu-2 -------------*/
+li:hover ul.drop-menu.menu-2 li:nth-child(1) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms -150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(2) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 0ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(3) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(4) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 300ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(5) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 450ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(6) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 600ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-2 li:nth-child(7) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu2 600ms 750ms ease-in-out forwards;
+}
+
+@keyframes menu2 {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg) translateY(30px);
+  }
+  60% {
+    opacity: 0;
+    transform: rotateX(50deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+  }
+}
+
+/*------------- Menu-3 -------------*/
+li:hover ul.drop-menu.menu-3 li:nth-child(1) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms -150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(2) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 0ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(3) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(4) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 300ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(5) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 450ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(6) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 600ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-3 li:nth-child(7) {
+  opacity: 0;
+  transform-origin: top center;
+  animation: menu3 300ms 750ms ease-in-out forwards;
+}
+
+@keyframes menu3 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-60px);
+  }
+  80% {
+    transform: scale(1.2) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0deg);
+  }
+}
+
+/*------------- Menu-4 -------------*/
+li:hover ul.drop-menu.menu-4 li:nth-child(1) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms -150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(2) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 0ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(3) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 150ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(4) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 300ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(5) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 450ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(6) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 600ms ease-in-out forwards;
+}
+li:hover ul.drop-menu.menu-4 li:nth-child(7) {
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu4 300ms 750ms ease-in-out forwards;
+}
+
+@keyframes menu4 {
+  0% {
+    opacity: 0;
+    transform: rotate(-30deg) translateX(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0) translateX(0deg);
+  }
+}

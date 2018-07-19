@@ -1,0 +1,204 @@
+.btn{
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.btn button{
+    line-height: 2.5em;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: aliceblue;
+    overflow: visible;
+    -webkit-box-shadow: 0px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.form-group{
+    margin: 15px 10px;
+    display: block;
+    
+}
+
+
+input, label{
+    width: 200px;
+    font-size: 20px;
+    line-height: 1.5em;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+label{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: white;
+}
+
+input{
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+}
+
+button{
+    width: 270px;
+    height: 2.5em;
+    font-size: 18px;
+    background-color: aqua;
+    display: block;
+    margin-top: 40px;
+    margin: 0 auto;
+}
+/* hide the modal before the button is pressed */
+.modal-container{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: cornflowerblue;
+    padding-left: 40px;
+    opacity: 0;
+    overflow: hidden;
+    
+}
+
+
+body{
+    background-color: lemonchiffon;
+    overflow: hidden;
+}
+
+.darken{
+    background-color: #989898;
+/*    z-index: 1;*/
+}
+
+/*--------------------------------------------DISPLAY MODAL ANIMATION----------------------------------------------------*/
+
+.modal-display{
+/*    opacity: 0;*/
+    -webkit-animation: opacityChange 2s ease-out ;
+    animation: openModal 1s ease-out forwards;
+    opacity: 0.9;
+    z-index: 20;
+}
+
+@-webkit-keyframes openModal {
+    0%{ 
+        opacity: 0;
+/*        margin-top: -330px;*/
+        -webkit-transform: scale(0);
+        transform: scale(0); }
+    
+    100%{ 
+        opacity: 1;
+/*        margin-top: 0px;*/
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+}
+
+
+@keyframes openModal {
+    0%{ 
+        opacity: 0;
+        margin-top: -330px;
+        -webkit-transform: scale(0);
+        transform: scale(0); }
+    
+    100%{ 
+        opacity: 1;
+        margin-top: 0px;
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+}
+
+/*--------------------------------------------CLOSE MODAL ANIMATION----------------------------------------------------*/
+.modal-close{
+/*    opacity: 0;*/
+    -webkit-animation: closeModal 2s ease-out forwards;
+    animation: closeModal 2s ease-out forwards;
+    opacity: 0.9;
+    z-index: 20;
+}
+
+@-webkit-keyframes closeModal {
+    0%{ 
+        opacity: 1;
+        margin-top: 0px;
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+    100%{ 
+        opacity: 0;
+        margin-top: -330px;
+        -webkit-transform: scale(0);
+        transform: scale(0); }
+}
+
+@keyframes closeModal {
+    0%{ 
+        opacity: 1;
+        margin-top: 0px;
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+    100%{ 
+        opacity: 0;
+        margin-top: -330px;
+        -webkit-transform: scale(0);
+        transform: scale(0); }
+}
+
+
+
+/*--------------------------------------------zoomIn MODAL ANIMATION----------------------------------------------------*/
+
+
+@-webkit-keyframes opacityChange {
+    0%{ 
+        opacity: 0;
+        margin-top: -330px;  }
+    
+    100%{ 
+        opacity: 1;
+        margin-top: 0px;  }
+}
+
+@keyframes opacityChange {
+    0%{ 
+        opacity: 0;
+        margin-top: -330px;  }
+    
+    100%{ 
+        opacity: 1;
+        margin-top: 0px;  }
+}
+
+.modal-zoomIn{
+    -webkit-animation: zoomIn 1s ease-out ;
+    animation: zoomIn 1s ease-out forwards;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    z-index: 25;
+    
+}
+
+
+@-webkit-keyframes zoomIn {
+    0%{ -webkit-transform: scale(0); transform: scale(0); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+
+}
+
+
+@keyframes zoomIn {
+    0%{ -webkit-transform: scale(0); transform: scale(0); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+
+}
